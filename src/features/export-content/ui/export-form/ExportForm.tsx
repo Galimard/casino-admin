@@ -63,7 +63,8 @@ const ExportForm = () => {
     const dateStart = dateRange?.[0] ? convertDate(dateRange[0]) : '';
     const dateEnd = dateRange?.[1] ? convertDate(dateRange[1]) : '';
 
-    const apiUrl = `/api/rest/mdigital_combinationsraffle.combinations?auth=${savedToken}&action=getXlsByDate&dateStart=${dateStart}&dateEnd=${dateEnd}`;
+    const apiUrl = `https://bitrix-api.mantera.digital/rest/mdigital_combinationsraffle.combinations?auth=${savedToken}&action=getXlsByDate&dateStart=${dateStart}&dateEnd=${dateEnd}`;
+    // const apiUrl = `/api/rest/mdigital_combinationsraffle.combinations?auth=${savedToken}&action=getXlsByDate&dateStart=${dateStart}&dateEnd=${dateEnd}`;
 
     axios.get(apiUrl)
       .then(function (response) {

@@ -48,7 +48,8 @@ const LoginForm = () => {
     if (!validateForm()) return;
 
     setIsSubmitting(true);
-    const apiUrl = `/api/rest_controller?action=getToken&scope=mdigital_combinationsraffle&username=${login}&password=${password}&remember=true`;    
+    const apiUrl = `https://bitrix-api.mantera.digital/rest_controller?action=getToken&scope=mdigital_combinationsraffle&username=${login}&password=${password}&remember=true`; 
+    // const apiUrl = `/api/rest_controller?action=getToken&scope=mdigital_combinationsraffle&username=${login}&password=${password}&remember=true`;    
 
     axios.get(apiUrl)
       .then(function (response) {
