@@ -1,0 +1,196 @@
+@use "forward" as *;
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/fonts/Roboto-Regular.woff') format('woff');
+  src: url('../assets/fonts/Roboto-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/fonts/Roboto-Light.woff') format('woff');
+  src: url('../assets/fonts/Roboto-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/fonts/Roboto-Bold.woff') format('woff');
+  src: url('../assets/fonts/Roboto-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  font-family: $font;
+  font-size: 14px;
+  line-height: $lineHeight;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: $cBlack;
+  background: $cBg;
+}
+
+html::-webkit-scrollbar {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: #cccccc;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #8f8f8f;
+}
+
+body.no-scroll{
+  overflow: hidden !important;
+  padding-right: 16px;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6,
+p {
+  margin: 0;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+a:hover {
+  color: inherit;
+}
+
+.typography-h1 {
+  font-size: 40px;
+  font-weight: $fBold;
+  line-height: $lineHeight;
+}
+
+.typography-body1 {
+  font-size: 14px;
+  font-weight: $fRegular;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.container {
+  max-width: 1136px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker__close-icon {
+  padding: 0;
+  top: -5px;
+
+  &::after {
+    background-color: $cRed;
+  }
+}
+
+.react-datepicker {
+  border-radius: 8px;
+}
+
+.react-datepicker__header:not(.react-datepicker__header--has-time-select) {
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.react-datepicker__header {
+  background-color: $cBg;
+}
+
+.react-datepicker__day-name,
+.react-datepicker__day,
+.react-datepicker__time-name {
+  width: 2.2rem;
+  line-height: 2.2rem;
+}
+
+.react-datepicker__day--selected, 
+.react-datepicker__day--in-selecting-range, 
+.react-datepicker__day--in-range, 
+.react-datepicker__month-text--selected, 
+.react-datepicker__month-text--in-selecting-range, 
+.react-datepicker__month-text--in-range, 
+.react-datepicker__quarter-text--selected, 
+.react-datepicker__quarter-text--in-selecting-range, 
+.react-datepicker__quarter-text--in-range, 
+.react-datepicker__year-text--selected, 
+.react-datepicker__year-text--in-selecting-range, 
+.react-datepicker__year-text--in-range {
+  background: $cRed;
+}
+
+.react-datepicker__day--keyboard-selected,
+.react-datepicker__month-text--keyboard-selected, 
+.react-datepicker__quarter-text--keyboard-selected, 
+.react-datepicker__year-text--keyboard-selected {
+  background-color: $cRedLight;
+}
+
+.react-datepicker__day--keyboard-selected:not([aria-disabled=true]):hover, 
+.react-datepicker__month-text--keyboard-selected:not([aria-disabled=true]):hover, 
+.react-datepicker__quarter-text--keyboard-selected:not([aria-disabled=true]):hover, 
+.react-datepicker__year-text--keyboard-selected:not([aria-disabled=true]):hover {
+  background: $cRed;
+}
+
+.react-datepicker__day--in-selecting-range:not(.react-datepicker__day--in-range, .react-datepicker__month-text--in-range, 
+.react-datepicker__quarter-text--in-range, 
+.react-datepicker__year-text--in-range), 
+.react-datepicker__month-text--in-selecting-range:not(.react-datepicker__day--in-range, 
+.react-datepicker__month-text--in-range, 
+.react-datepicker__quarter-text--in-range, 
+.react-datepicker__year-text--in-range), 
+.react-datepicker__quarter-text--in-selecting-range:not(.react-datepicker__day--in-range, 
+.react-datepicker__month-text--in-range, 
+.react-datepicker__quarter-text--in-range, 
+.react-datepicker__year-text--in-range), 
+.react-datepicker__year-text--in-selecting-range:not(.react-datepicker__day--in-range, 
+.react-datepicker__month-text--in-range, 
+.react-datepicker__quarter-text--in-range, 
+.react-datepicker__year-text--in-range) {
+  background: rgb(252, 150, 150);
+}
+
+.react-datepicker__day--selected:not([aria-disabled=true]):hover, 
+.react-datepicker__day--in-selecting-range:not([aria-disabled=true]):hover, 
+.react-datepicker__day--in-range:not([aria-disabled=true]):hover, 
+.react-datepicker__month-text--selected:not([aria-disabled=true]):hover, 
+.react-datepicker__month-text--in-selecting-range:not([aria-disabled=true]):hover, 
+.react-datepicker__month-text--in-range:not([aria-disabled=true]):hover, 
+.react-datepicker__quarter-text--selected:not([aria-disabled=true]):hover, 
+.react-datepicker__quarter-text--in-selecting-range:not([aria-disabled=true]):hover, 
+.react-datepicker__quarter-text--in-range:not([aria-disabled=true]):hover, 
+.react-datepicker__year-text--selected:not([aria-disabled=true]):hover, 
+.react-datepicker__year-text--in-selecting-range:not([aria-disabled=true]):hover, 
+.react-datepicker__year-text--in-range:not([aria-disabled=true]):hover {
+  background: $cRed;
+}

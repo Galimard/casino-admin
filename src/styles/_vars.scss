@@ -1,0 +1,47 @@
+$fontName: "Roboto";
+$font: $fontName, Helvetica, Arial, sans-serif, -apple-system;
+
+$rem: 1px;
+
+$cBlack: #242529;
+$cGrey: #6B7283;
+$cGreyDisabled: #E6E8EC;
+$cRed: #ED1E24;
+$cWhite: #ffffff;
+$cError: #ED1E24;
+$cBg: #F4F5F6;
+$cRedLight: #f0dada;
+
+$space: 10px;
+
+$fRegular: 400;
+$fLight: 300;
+$fBold: 700;
+
+$lineHeight: 1.2;
+$lineHeightTitle: 1;
+
+$screenXxs: 376px; //375 //min-width
+$screenXs: 392px; //576
+$screenSm: 768px; //768
+$screenMd: 992px; //992
+$screenLg: 1272px; //1200
+$screenXl: 1441px; //1440
+$screenXxl: 1920px; //1920
+
+$screenXxsMax: ($screenXxs - 1); //max-width
+$screenXsMax: ($screenXs - 1);
+$screenSmMax: ($screenSm - 1);
+$screenMdMax: ($screenMd - 1);
+$screenLgMax: ($screenLg - 1);
+$screenXlMax: ($screenXl - 1);
+$screenXxlMax: ($screenXxl - 1);
+
+//ширина контейнера
+$c-xxl: 1180px; 
+$c-xl: 1180px; 
+$c-l: 1180px; 
+$c-md: 768px; //992
+$c-sm: 720px; //768
+$c-xs: 540px; //576
+$c-xxs: 375px; //375
